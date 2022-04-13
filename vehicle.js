@@ -1,5 +1,5 @@
 class Vehicle {
-    constructor(make, model, year, color, mileage) {
+    constructor(make, model, year, color, mileage, fuel) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -9,11 +9,12 @@ class Vehicle {
         this.mileage = mileage;
         this.started = false;
         this.numberOfWheels = 0;
+        this.fuel = fuel
     }
 
     start() {
         if (this.fuel > 0) {
-            return this.started = true;
+            // return this.started = true;
             console.log("engine started...!!!");
         } else {
             return this.started = false;
@@ -62,14 +63,12 @@ class Vehicle {
         decelerate();
     }
 
-    autoPark()
-    {
+    autoPark() {
 
     }
 
-    autoDrive()
-    {
-      
+    autoDrive() {
+
     }
 
     typeOfVehicle(wheels) {
@@ -89,3 +88,16 @@ class Vehicle {
 module.exports = {
     Vehicle
 }
+
+// let newCar = new Vehicle("Subaru", "WRX", "2011", "Blue", "85,051", 10)
+// newCar.start()
+
+// class Car extends Vehicle {
+//     constructor(make, model, year, color, mileage) {
+//         super(make, model, year, color, mileage)
+//     }
+// }
+
+// let myCar = new Car("Subaru", "WRX", "2011", "Blue", "85,051", 10)
+
+// console.log(myCar)
